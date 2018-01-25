@@ -25,18 +25,21 @@ public class Lab5 {
 			System.out.print("How many sides should each die have? ");
 			dieSides = scan.nextInt();
 
+			int die1 = randomNum1(dieSides);
+			int die2 = randomNum2(dieSides);
+			
 			System.out.println(" ");
 			System.out.println("Roll " + i + ": ");
-			System.out.println(randomNum1(dieSides));
-			System.out.println(randomNum2(dieSides));
+			System.out.println(die1);
+			System.out.println(die2);
 			
-			if (((randomNum1(dieSides) + randomNum2(dieSides)) == 7) || ((randomNum1(dieSides) + randomNum2(dieSides)) == 11)) {
+			if ((die1 + die2 == 7) || (die1 + die2) == 11) {
 				System.out.println("CRAPS!");
 			}
-			if (((randomNum1(dieSides) == 1) && (randomNum2(dieSides) == 1))) {
+			if (die1 == 1 && die2 == 1) {
 				System.out.println("SNAKE EYES!");
 			}
-			if (((randomNum1(dieSides) == 6) && (randomNum2(dieSides) == 6))) {
+			if (die1 == 6 && die2 == 6) {
 				System.out.println("BOX CARS!");
 			}
 
